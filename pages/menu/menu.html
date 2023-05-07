@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasaki Menu</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="../../sass/custom.css" />
+
+</head>
+<body>
+
+  <main class="menu" data-bs-theme="dark">
+    <nav class="navbar navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Reservations</a>
+        <button
+          class="navbar-toggler"
+          id="burgerToggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div class="burger"  id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+             Hasaki Restaurant
+            </h5>
+           
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >The Restaurant</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/menu/menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reservations</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+<!-- Swiper -->
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">
+      <div class="swiper swiperMenu1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">Slide 4</div>
+    <div class="swiper-slide">Slide 5</div>
+    <div class="swiper-slide">Slide 6</div>
+    <div class="swiper-slide">Slide 7</div>
+    <div class="swiper-slide">Slide 8</div>
+    <div class="swiper-slide">Slide 9</div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script
+  src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+></script>
+  <script src="./menu.js.js"></script>
+</body>
+</html>

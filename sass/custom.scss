@@ -1,0 +1,210 @@
+// Include any default variable overrides here (though functions won't be available)
+$enable-reduced-motion: false;
+// offcanvas
+$offcanvas-horizontal-width: 300px;
+$offcanvas-transition-duration: 0.7s;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Then add additional custom code here
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .header--bg-img {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/hero.jpg");
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120% 110%;
+    transition: 2s ease-in;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .about {
+    margin-top: 50vh;
+  }
+  .btmNav {
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+nav {
+  background-color: #000;
+  .navbar-brand {
+    color: aliceblue;
+  }
+  .burger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    span {
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 50%;
+      background-color: aliceblue;
+      opacity: 1;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+      &:nth-child(even) {
+        left: 50%;
+        border-radius: 0 9px 9px 0;
+      }
+      &:nth-child(odd) {
+        left: 0px;
+        border-radius: 9px 0 0 9px;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        top: 0px;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        top: 18px;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        top: 30px;
+      }
+    }
+    &.open span:nth-child(1),
+    &.open span:nth-child(6) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &.open span:nth-child(2),
+    &.open span:nth-child(5) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    &.open span:nth-child(1) {
+      left: 4px;
+      top: 12px;
+    }
+
+    &.open span:nth-child(2) {
+      left: calc(50% - 4px);
+      top: 12px;
+    }
+
+    &.open :nth-child(3) {
+      left: -50%;
+      opacity: 0;
+    }
+
+    &.open :nth-child(4) {
+      left: 100%;
+      opacity: 0;
+    }
+
+    &.open :nth-child(5) {
+      left: 5px;
+      top: 29px;
+    }
+
+    &.open :nth-child(6) {
+      left: calc(50% - 5px);
+      top: 29px;
+    }
+
+    &:hover {
+      .nav--burger-div-1 {
+        width: 60%;
+
+        // background-color: rgba($color: #fff, $alpha: 0.6);
+      }
+      .nav--burger-div-2 {
+        width: 80%;
+        // background-color: rgba($color: #fff, $alpha: 0.6);
+      }
+      .nav--burger-div-3 {
+        width: 100%;
+        // background-color: rgba($color: #fff, $alpha: 0.6);
+      }
+    }
+    &.active {
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 1px;
+        transform: translate(50%, -50%);
+      }
+
+      .nav--burger-div-1 {
+        // background-color: rgba($color: #fff, $alpha: 0.6);
+      }
+      .nav--burger-div-2 {
+        display: none;
+        // background-color: rgba($color: #fff, $alpha: 0.6);
+      }
+      .nav--burger-div-3 {
+        // background-color: rgba($color: #fff, $alpha: 0.6);
+      }
+    }
+  }
+}
+.navbar-toggler {
+  z-index: 1000000;
+}
+.offcanvas-header {
+  margin-top: 70px;
+}
+.menu{
+  width: 100%;
+  height: calc(100vh - 56px);
+  .swiper {
+    width: 100%;
+    height: calc(100vh - 56px);
+    margin-top: 56px;
+  }
+  // .swiper1 {
+  //   width: 80%;
+  //   margin-inline: auto;
+  //   height: calc(100vh - 56px);
+  //   margin-top: 56px;
+  // }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
